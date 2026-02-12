@@ -1,0 +1,145 @@
+/* ================= PAGE ================= */
+
+.dashboard {
+  padding-top: 12px;
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+/* ================= GRID ================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+/* ================= CARD ================= */
+
+.stat-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+
+  /* ✅ soft modern shadow (no border look) */
+  box-shadow: 0 0 0 3px rgba(89, 129, 197, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.stat-card:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.25),
+    0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* ================= ICON ================= */
+
+.stat-icon {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+/* ================= TEXT ================= */
+
+.stat-card h4 {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.stat-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ================= COLORS ================= */
+
+.blue {
+  color: #2563eb;
+}
+
+.green {
+  color: #16a34a;
+}
+
+.purple {
+  color: #7c3aed;
+}
+
+.orange {
+  color: #f97316;
+}
+
+/* ================= GLASS EFFECT ================= */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+/* ================= SKELETON ================= */
+
+.skeleton {
+  height: 140px;
+  border-radius: 16px;
+  background: linear-gradient(
+    90deg,
+    #f1f5f9 25%,
+    #e2e8f0 37%,
+    #f1f5f9 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark .page-title {
+  color: #e5e7eb;
+}
+
+body.dark .stat-card {
+  background: #0f172a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .stat-card h4 {
+  color: #9ca3af;
+}
+
+body.dark .stat-value {
+  color: #f8fafc;
+}
+
+body.dark .stat-hint {
+  color: #94a3b8;
+}

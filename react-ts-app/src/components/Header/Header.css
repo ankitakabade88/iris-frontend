@@ -1,0 +1,75 @@
+.top-header {
+  height: 72px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* LEFT SECTION */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* GREETING */
+.greeting {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.user-name {
+  color: #2563eb;
+}
+
+/* SEARCH BOX */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #f1f5f9;
+  padding: 8px 14px;
+  border-radius: 12px;
+  width: 320px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.search-icon {
+  color: #64748b;
+}
+
+/* RIGHT */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-icon {
+  font-size: 30px;
+  color: #475569;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.profile-icon:hover {
+  color: #2563eb;
+}
