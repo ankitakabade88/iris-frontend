@@ -1,0 +1,419 @@
+/* =====================================================
+   PAGE WRAPPER
+===================================================== */
+
+.users-grid-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.grid-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
+
+.search-input {
+  height: 42px;
+
+  min-width: 240px;
+
+  padding: 0 14px;
+
+  border-radius: 12px;
+
+  border: 1.5px solid #ffe4e6;
+
+  background: #ffffff;
+
+  font-size: 14px;
+
+  transition: all .18s ease;
+}
+
+.search-input:focus {
+  outline: none;
+
+  border-color: #dc2626;
+
+  box-shadow: 0 0 0 3px rgba(220,38,38,.12);
+}
+
+
+/* =====================================================
+   ADD USER BUTTON
+===================================================== */
+
+.add-user-btn {
+  background: linear-gradient(135deg,#ef4444,#dc2626);
+
+  color: #fff;
+
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 12px;
+
+  font-size: 13.5px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.add-user-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 12px 24px rgba(220,38,38,.28);
+}
+
+
+/* =====================================================
+   VIEW TOGGLE
+===================================================== */
+
+.view-toggle {
+  display: flex;
+
+  gap: 6px;
+
+  background: #fff1f2;
+
+  padding: 4px;
+
+  border-radius: 12px;
+
+  border: 1px solid #ffe4e6;
+}
+
+.view-toggle button {
+  border: none;
+
+  background: transparent;
+
+  padding: 8px 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  color: #6b7280;
+
+  transition: all .18s ease;
+}
+
+.view-toggle button.active {
+  background: #ffffff;
+
+  color: #dc2626;
+
+  box-shadow: 0 2px 8px rgba(220,38,38,.15);
+}
+
+
+/* =====================================================
+   USERS GRID
+===================================================== */
+
+.users-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+
+  gap: 26px;
+
+  margin-top: 6px;
+}
+
+
+/* =====================================================
+   USER CARD
+===================================================== */
+
+.user-card {
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  padding: 26px 20px;
+
+  border: 1px solid #ffe4e6;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: all .25s ease;
+}
+
+
+/* Hover */
+
+.user-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(239,68,68,.35);
+
+  box-shadow:
+    0 20px 40px rgba(220,38,38,.12);
+}
+
+
+/* Accent bar */
+
+.user-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  height: 100%;
+  width: 4px;
+
+  background: linear-gradient(#ef4444,#dc2626);
+
+  opacity: 0;
+
+  transition: opacity .25s ease;
+}
+
+.user-card:hover::before {
+  opacity: 1;
+}
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
+
+.user-avatar {
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(135deg,#fee2e2,#fecaca);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #dc2626;
+
+  font-weight: 700;
+
+  font-size: 18px;
+}
+
+.user-name {
+  font-weight: 600;
+
+  color: #111827;
+}
+
+.user-role {
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.status-badge {
+  padding: 5px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: .2px;
+}
+
+.status-badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.pending {
+  background: #fff1f2;
+  color: #b91c1c;
+}
+
+
+/* =====================================================
+   TABLE VIEW
+===================================================== */
+
+.users-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid #ffe4e6;
+
+  box-shadow:
+    0 2px 6px rgba(0,0,0,.04),
+    0 12px 26px rgba(220,38,38,.06);
+}
+
+.users-table thead th {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 5;
+
+  background: #fff1f2;
+
+  padding: 18px;
+
+  text-align: left;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #7f1d1d;
+
+  border-bottom: 1px solid #ffe4e6;
+}
+
+.users-table td {
+  padding: 16px 18px;
+
+  font-size: 14px;
+
+  color: #374151;
+
+  border-bottom: 1px solid #ffe4e6;
+}
+
+.users-table tbody tr:hover {
+  background: #fff1f2;
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-state {
+  text-align: center;
+
+  padding: 70px 0;
+
+  color: #6b7280;
+
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   SKELETON
+===================================================== */
+
+.skeleton-card {
+  pointer-events: none;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.skeleton-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgba(255,255,255,.6) 40%,
+    transparent 55%
+  );
+
+  animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(120%); }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .grid-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -1,0 +1,158 @@
+/* =====================================================
+   ROOM CARD — SAAS STYLE
+===================================================== */
+
+.room-card {
+  position: relative;
+  background: #ffffff;
+
+  border-radius: 18px;
+  padding: 26px 22px;
+
+  border: 1px solid #ffe4e6;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,.04);
+}
+
+
+/* =====================================================
+   HOVER EFFECT
+===================================================== */
+
+.room-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(239,68,68,.35);
+
+  box-shadow:
+    0 22px 42px rgba(220,38,38,.12);
+}
+
+
+/* =====================================================
+   STATUS BADGE
+===================================================== */
+
+.room-card-top {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+
+/* AVAILABLE */
+
+.status-pill.available {
+  background: rgba(34,197,94,.12);
+  color: #16a34a;
+}
+
+.status-pill.available .status-dot {
+  background: #16a34a;
+}
+
+
+/* BUSY */
+
+.status-pill.busy {
+  background: rgba(239,68,68,.12);
+  color: #dc2626;
+}
+
+.status-pill.busy .status-dot {
+  background: #dc2626;
+}
+
+
+/* =====================================================
+   ROOM ICON
+===================================================== */
+
+.room-icon {
+  width: 64px;
+  height: 64px;
+
+  border-radius: 16px;
+
+  background: rgba(239,68,68,.08);
+  color: #ef4444;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+
+  margin-top: 10px;
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.room-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.room-type {
+  font-size: 12.5px;
+  letter-spacing: .8px;
+
+  color: #6b7280;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   CAPACITY BADGE
+===================================================== */
+
+.room-capacity {
+  margin-top: 8px;
+
+  padding: 6px 14px;
+
+  border-radius: 999px;
+
+  background: #fff1f2;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #7f1d1d;
+}

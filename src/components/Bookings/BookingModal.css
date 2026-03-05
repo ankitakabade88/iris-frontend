@@ -1,0 +1,175 @@
+/* =====================================================
+   MODAL OVERLAY
+===================================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(15, 23, 42, .45);
+  backdrop-filter: blur(6px) saturate(140%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+
+  z-index: 9999;
+}
+
+
+/* =====================================================
+   MODAL CARD
+===================================================== */
+
+.modal-card {
+  width: 460px;
+  max-width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  border: 1px solid #ffe4e6;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 60px 120px rgba(220, 38, 38, .18),
+    0 20px 40px rgba(0,0,0,.08);
+}
+
+
+/* =====================================================
+   MODAL HEADER
+===================================================== */
+
+.modal-header {
+  padding: 22px 26px;
+
+  border-bottom: 1px solid #ffe4e6;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+}
+
+
+/* =====================================================
+   STATUS BADGE
+===================================================== */
+
+.modal-status {
+  padding: 6px 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.modal-status.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.modal-status.upcoming {
+  background: #fff1f2;
+  color: #dc2626;
+}
+
+
+/* =====================================================
+   MODAL CONTENT
+===================================================== */
+
+.modal-content {
+  padding: 26px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal-row {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 15px;
+}
+
+.modal-row span {
+  color: #6b7280;
+}
+
+
+/* =====================================================
+   PURPOSE BOX
+===================================================== */
+
+.modal-purpose {
+  background: #fff1f2;
+
+  border: 1px solid #ffe4e6;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  font-size: 14px;
+  color: #7f1d1d;
+}
+
+
+/* =====================================================
+   MODAL FOOTER
+===================================================== */
+
+.modal-footer {
+  padding: 22px 26px;
+
+  border-top: 1px solid #ffe4e6;
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.modal-close-btn {
+  width: 100%;
+
+  border: none;
+
+  background: linear-gradient(
+    90deg,
+    #ef4444,
+    #dc2626
+  );
+
+  color: white;
+
+  padding: 13px;
+
+  border-radius: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.modal-close-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 14px 28px rgba(220, 38, 38, .35);
+}

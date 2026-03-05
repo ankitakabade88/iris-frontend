@@ -1,0 +1,54 @@
+/* ================= PRIMARY BUTTON ================= */
+
+.primary-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.25);
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(220, 38, 38, 0.35);
+}
+
+/* Active (click) */
+.primary-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(220, 38, 38, 0.3);
+}
+
+/* Focus (keyboard users) */
+.primary-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.35);
+}
+
+/* ================= HEADINGS ================= */
+
+h1,
+h2,
+h3 {
+  color: #111827;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.page-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}

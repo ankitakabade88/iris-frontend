@@ -1,0 +1,258 @@
+/* =====================================================
+   ROOMS PAGE
+===================================================== */
+
+.rooms-page {
+  width: 100%;
+  padding: 24px;
+
+  min-height: 100%;
+
+  background: transparent;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.page-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 26px;
+
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: 700;
+
+  color: var(--text-main);
+}
+
+.page-subtitle {
+  margin-top: 4px;
+
+  color: var(--text-muted);
+
+  font-size: 14px;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+
+/* =====================================================
+   SEARCH + FILTER
+===================================================== */
+
+.search-input {
+  height: 42px;
+  width: 240px;
+
+  padding: 0 14px;
+
+  border-radius: 12px;
+
+  border: 1px solid var(--border);
+
+  background: var(--bg-card);
+
+  color: var(--text-main);
+
+  outline: none;
+
+  transition: .2s;
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 3px rgba(220,38,38,.15);
+}
+
+.filter-dropdown {
+  height: 42px;
+
+  padding: 0 12px;
+
+  border-radius: 12px;
+
+  border: 1px solid var(--border);
+
+  background: var(--bg-card);
+}
+
+
+/* =====================================================
+   VIEW TOGGLE
+===================================================== */
+
+.view-toggle {
+  display: flex;
+
+  background: #fff1f2;
+
+  padding: 4px;
+
+  border-radius: 12px;
+
+  gap: 4px;
+
+  border: 1px solid var(--border);
+}
+
+.view-toggle button {
+  border: none;
+
+  background: transparent;
+
+  padding: 8px 14px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  color: var(--text-muted);
+
+  transition: .2s;
+}
+
+.view-toggle button.active {
+  background: var(--primary);
+
+  color: white;
+
+  box-shadow: 0 4px 12px rgba(220,38,38,.25);
+}
+
+
+/* =====================================================
+   TABLE SURFACE
+===================================================== */
+
+.rooms-table-wrapper {
+  background: var(--bg-card);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+
+  box-shadow: 0 6px 20px rgba(220,38,38,.06);
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.rooms-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.rooms-table thead th {
+  padding: 18px;
+
+  text-align: left;
+
+  background: #fff1f2;
+
+  font-weight: 600;
+
+  color: var(--text-main);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 2;
+}
+
+.rooms-table td {
+  padding: 16px 18px;
+
+  border-top: 1px solid var(--border);
+
+  font-size: 14.5px;
+}
+
+
+/* Zebra rows */
+
+.rooms-table tbody tr:nth-child(even) {
+  background: #fffafa;
+}
+
+.rooms-table tbody tr {
+  transition: background .18s ease, transform .12s ease;
+}
+
+.rooms-table tbody tr:hover {
+  background: #fff1f2;
+
+  transform: scale(1.0015);
+}
+
+
+/* =====================================================
+   GRID VIEW
+===================================================== */
+
+.rooms-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+
+  gap: 28px;
+
+  padding: 10px 6px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .rooms-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar-right {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+}

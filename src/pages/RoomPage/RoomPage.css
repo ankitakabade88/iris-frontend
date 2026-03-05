@@ -1,0 +1,333 @@
+/* =====================================================
+   PAGE ROOT
+===================================================== */
+
+.rooms-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px 32px 40px;
+
+  background: linear-gradient(
+    180deg,
+    #fffafa 0%,
+    #ffffff 40%
+  );
+
+  display: flex;
+  flex-direction: column;
+
+  animation: pageFadeIn .28s ease;
+}
+
+/* =====================================================
+   GRID LIKE BOOKINGS
+===================================================== */
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.room-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  border: 1px solid #fee2e2;
+  text-align: center;
+  transition: .25s ease;
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(220,38,38,.06);
+}
+
+.room-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(220,38,38,.15);
+}
+
+/* =====================================================
+   MAIN CARD (WHITE SURFACE)
+===================================================== */
+
+.rooms-section-card {
+  background: #fff7f7;
+  border-radius: 20px;
+  padding: 24px;
+  margin-top: 12px;
+  border: 1px solid #fee2e2;
+
+  box-shadow:
+    0 4px 16px rgba(220,38,38,.05);
+}
+
+/* =====================================================
+   PAGE TOOLBAR
+===================================================== */
+
+.page-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #7f1d1d;
+}
+
+.page-subtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #b91c1c;
+}
+
+/* =====================================================
+   RIGHT TOOLBAR
+===================================================== */
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
+
+.search-input {
+  height: 42px;
+  width: 240px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1.5px solid #fecaca;
+  background: #ffffff;
+  outline: none;
+  transition: .2s ease;
+}
+
+.search-input:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220,38,38,.15);
+}
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.filter-dropdown {
+  height: 42px;
+  border-radius: 12px;
+  padding: 0 12px;
+  background: #ffffff !important;
+  color: #7f1d1d;
+  border: 1px solid #fecaca;
+}
+
+.filter-dropdown:focus {
+  border-color: #dc2626;
+}
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.btn-primary {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg,#ef4444,#dc2626);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(220,38,38,.3);
+}
+
+/* =====================================================
+   VIEW TOGGLE
+===================================================== */
+
+.view-toggle {
+  display: flex;
+  background: #fff1f2;
+  padding: 4px;
+  border-radius: 12px;
+  gap: 4px;
+}
+
+.view-toggle button {
+  border: none;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #b91c1c;
+  font-weight: 500;
+}
+
+.view-toggle button.active {
+  background: #dc2626;
+  color: white;
+  box-shadow: 0 6px 16px rgba(220,38,38,.25);
+}
+
+/* =====================================================
+   TABLE WRAPPER
+===================================================== */
+
+.rooms-table-wrapper {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #ffffff;
+}
+
+/* =====================================================
+   TABLE STYLE (FULL PALE RED THEME)
+===================================================== */
+
+.rooms-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  background: #fffafa;
+}
+
+/* Header */
+.rooms-table thead {
+  background: #ffe4e6;
+}
+
+.rooms-table th {
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7f1d1d;
+}
+
+/* Cells */
+.rooms-table td {
+  padding: 14px 18px;
+  border-top: 1px solid #ffffff;
+  color: #7f1d1d;
+  font-size: 14px;
+}
+
+/* Hover */
+.rooms-table tbody tr {
+  transition: .15s ease;
+  cursor: pointer;
+}
+
+.rooms-table tbody tr:hover {
+  background: #ffffff;
+}
+
+/* =====================================================
+   STATUS BADGE
+===================================================== */
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-badge.available {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.busy {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-state {
+  text-align: center;
+  padding: 80px 0;
+  color: #b91c1c;
+  font-weight: 500;
+}
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination span {
+  font-size: 14px;
+  color: #7f1d1d;
+  font-weight: 500;
+}
+
+.pagination button {
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #b91c1c;
+  direction: right;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.pagination button:hover {
+  background: #fee2e2;
+}
+
+.pagination button.primary {
+  background: linear-gradient(135deg,#ef4444,#dc2626);
+  color: white;
+  border: none;
+  box-shadow: 0 6px 16px rgba(220,38,38,.25);
+}
+
+/* =====================================================
+   PAGE ANIMATION
+===================================================== */
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

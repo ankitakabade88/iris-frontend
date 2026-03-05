@@ -1,0 +1,358 @@
+/* =====================================================
+   TABLE SURFACE
+===================================================== */
+
+.booking-table-wrapper {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  padding: 20px;
+
+  border: 1px solid #ffe4e6;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow:
+    0 2px 6px rgba(0,0,0,.04),
+    0 10px 24px rgba(220,38,38,.08);
+}
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.table-toolbar {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.table-toolbar h2 {
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #111827;
+
+  margin: 0;
+}
+
+.record-count {
+  font-size: 13px;
+
+  color: #6b7280;
+
+  margin-top: 2px;
+
+  display: block;
+}
+
+
+/* =====================================================
+   TOOLBAR RIGHT
+===================================================== */
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.booking-search {
+  width: 240px;
+
+  padding: 9px 12px;
+
+  border-radius: 10px;
+
+  border: 1.5px solid #ffe4e6;
+
+  background: #fff1f2;
+
+  font-size: 13.5px;
+
+  transition: all .2s ease;
+}
+
+.booking-search:focus {
+  outline: none;
+
+  background: #ffffff;
+
+  border-color: #dc2626;
+
+  box-shadow: 0 0 0 3px rgba(220,38,38,.12);
+}
+
+
+/* =====================================================
+   STATUS FILTER BUTTONS
+===================================================== */
+
+.status-filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-btn {
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  border: 1px solid #ffe4e6;
+
+  background: #ffffff;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #6b7280;
+
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.filter-btn:hover {
+  background: #fff1f2;
+}
+
+.filter-btn.active {
+  background: #dc2626;
+
+  color: #ffffff;
+
+  border-color: #dc2626;
+
+  box-shadow: 0 4px 12px rgba(220,38,38,.25);
+}
+
+
+/* =====================================================
+   TABLE SCROLL AREA
+===================================================== */
+
+.table-scroll {
+  max-height: 520px;
+
+  overflow-y: auto;
+
+  border-radius: 12px;
+
+  border: 1px solid #ffe4e6;
+
+  background: #ffffff;
+}
+
+
+/* Scrollbar */
+
+.table-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background: #fca5a5;
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.booking-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.booking-table thead th {
+  position: sticky;
+  top: 0;
+
+  z-index: 5;
+
+  background: #fff1f2;
+
+  padding: 15px 18px;
+
+  text-align: left;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #374151;
+
+  border-bottom: 1px solid #ffe4e6;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  transition: background .15s ease;
+}
+
+.booking-table thead th:hover {
+  background: #ffe4e6;
+}
+
+
+/* =====================================================
+   ROWS
+===================================================== */
+
+.booking-table tbody tr {
+  transition: background .15s ease;
+}
+
+.booking-table tbody tr:nth-child(even) {
+  background: #fffafa;
+}
+
+.booking-table tbody tr:hover {
+  background: #fff1f2;
+}
+
+
+/* =====================================================
+   CELLS
+===================================================== */
+
+.booking-table td {
+  padding: 15px 18px;
+
+  font-size: 14px;
+
+  color: #1f2937;
+
+  border-bottom: 1px solid #ffe4e6;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.status-badge {
+  padding: 5px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.status-badge.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.upcoming {
+  background: #fff1f2;
+  color: #dc2626;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-state {
+  text-align: center;
+
+  padding: 50px;
+
+  color: #6b7280;
+
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+.pagination {
+  margin-top: 18px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 7px 12px;
+
+  border-radius: 8px;
+
+  border: 1px solid #ffe4e6;
+
+  background: #ffffff;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #dc2626;
+
+  color: #ffffff;
+
+  border-color: #dc2626;
+}
+
+.pagination button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+
+/* =====================================================
+   SORT ICON
+===================================================== */
+
+.th-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sort-icon {
+  font-size: 12px;
+  color: #dc2626;
+}
